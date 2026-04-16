@@ -3,6 +3,19 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-1/basic-calculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-1/math-application" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-1/method-practice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-1/my-second-repo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-1/payroll-calculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-1/sandwich-shop" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-1/string-application" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-2/TheaterReservations" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-2/cellphone-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-2/full-name-generator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-2/full-name-parser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workshops/financial-calculators" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/yearup-java" vcs="Git" />
   </component>
 </project>
