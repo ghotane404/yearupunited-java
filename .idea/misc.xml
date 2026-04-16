@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/workshops/financial-calculators/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/MyNotes/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/sandwich-shop/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/my-second-repo/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/method-practice/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/basic-calculator/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/math-application/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/payroll-calculator/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/string-application/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-03/data-types-demo-final/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-03/data-types-demo-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/review-demos/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/functions-demo-final/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/conditions-demo-final/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/functions-demo-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/conditions-demo-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/user-input-output-demo-final/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/user-input-output-demo-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-05/MathApp-setup/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/java-syntax/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/binary-conversion/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-1/arrays-strings-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-1/review-financial-calculators/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-2/strings-review-and-demo-final/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-2/strings-review-and-demo-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-3/intro-to-classes-final/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-2/full-name-parser/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-2/cellphone-service/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-2/full-name-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/workbook-2/TheaterReservations/pom.xml" />
+        <option value="$PROJECT_DIR$/yearup-java/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="corretto-26" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
