@@ -15,6 +15,7 @@
     <mapping directory="$PROJECT_DIR$/workbook-2/cellphone-service" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/workbook-2/full-name-generator" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/workbook-2/full-name-parser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/workbook-2/looping-exercises" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/workshops/financial-calculators" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/yearup-java" vcs="Git" />
   </component>
