@@ -1,11 +1,11 @@
 package com.pluralsight;
 
 public class Book {
-    int bookID;
-    String bookISBN;
-    String bookTitle;
-    boolean isCheckedOut;
-    String checkedOutTo;
+    private int bookID;
+    private String bookISBN;
+    private String bookTitle;
+    private boolean isCheckedOut;
+    private String checkedOutTo;
 
     Book(int bookID, String bookISBN, String bookTitle) {
         this.bookID = bookID;
@@ -15,35 +15,29 @@ public class Book {
         this.checkedOutTo = "";
     }
 
-    // getter that returns
-    public int getBookID(){
+    public void checkOut(String name) {
+        this.checkedOutTo = name;
+        this.isCheckedOut = true;
+    }
+    public void checkIn() {
+        this.checkedOutTo = "";
+        this.isCheckedOut = false;
+    }
+
+    // getters
+    public int getBookID() {
         return bookID;
     }
-    public String getBookISBN(){
+    public String getBookISBN() {
         return bookISBN;
     }
-    public String getBookTitle(){
+    public String getBookTitle() {
         return bookTitle;
     }
-
-    // setters that sets
-    public void setBookID(int bookID){
-        this.bookID = bookID;
+    public boolean getCheckOut() {
+        return isCheckedOut;
     }
-    public void setBookISBN(String bookISBN){
-        this.bookISBN = bookISBN;
-    }
-    public void setBookTitle(String bookTitle){
-        this.bookTitle = bookTitle;
-    }
-
-    public void checkOut(String name){
-        isCheckedOut = true;
-        checkedOutTo = name;
-    }
-    public void checkIn(){
-        isCheckedOut = false;
-        checkedOutTo = "";
+    public String getCheckOutName() {
+        return checkedOutTo;
     }
 }
-
