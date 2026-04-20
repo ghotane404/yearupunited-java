@@ -8,44 +8,44 @@
         <outputRelativeToContentRoot value="true" />
         <module name="strings-review-and-demo" />
         <module name="string-application" />
-        <module name="functions-demo-starter (2)" />
-        <module name="arrays-strings-demo" />
         <module name="full-name-parser" />
-        <module name="strings-review-and-demo (1)" />
-        <module name="MathApp-setup" />
-        <module name="conditions-demo-starter (1)" />
         <module name="cellphone-service" />
-        <module name="binary-conversion" />
-        <module name="java-syntax" />
         <module name="data-types-demo-starter" />
         <module name="math-application" />
-        <module name="data-types-demo-starter (1)" />
         <module name="conditions-demo-starter" />
-        <module name="user-input-output-demo-starter (1)" />
         <module name="TheaterReservations" />
         <module name="basic-calculator" />
-        <module name="review-demos" />
         <module name="financial-calculators" />
         <module name="full-name-generator" />
-        <module name="functions-demo-starter (1)" />
         <module name="my-second-repo" />
-        <module name="ClassesDemo" />
         <module name="functions-demo-starter" />
-        <module name="strings-review-and-demo (2)" />
         <module name="sandwich-shop" />
         <module name="method-practice" />
-        <module name="user-input-output-demo-starter (2)" />
-        <module name="data-types-demo-starter (2)" />
-        <module name="review-financial-calculators" />
         <module name="user-input-output-demo-starter" />
         <module name="payroll-calculator" />
-        <module name="conditions-demo-starter (2)" />
         <module name="yearup-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="arrays-strings-demo" target="26" />
+      <module name="binary-conversion" target="26" />
+      <module name="ClassesDemo" target="26" />
+      <module name="conditions-demo-starter (1)" target="26" />
+      <module name="conditions-demo-starter (2)" target="26" />
+      <module name="data-types-demo-starter (1)" target="26" />
+      <module name="data-types-demo-starter (2)" target="26" />
+      <module name="functions-demo-starter (1)" target="26" />
+      <module name="functions-demo-starter (2)" target="26" />
+      <module name="java-syntax" target="26" />
+      <module name="MathApp-setup" target="26" />
       <module name="MyNotes" target="26" />
       <module name="pluralsight" target="26" />
+      <module name="review-demos" target="26" />
+      <module name="review-financial-calculators" target="26" />
+      <module name="strings-review-and-demo (1)" target="26" />
+      <module name="strings-review-and-demo (2)" target="26" />
+      <module name="user-input-output-demo-starter (1)" target="26" />
+      <module name="user-input-output-demo-starter (2)" target="26" />
     </bytecodeTargetLevel>
   </component>
 </project>
