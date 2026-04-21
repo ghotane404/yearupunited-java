@@ -1287,7 +1287,9 @@ System.out.println(sum);   // prints the final total
 
 ### 12.2 do/while
 
-A `do/while` loop always runs at least once.
+The `do/while` loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true. Then it will repeat the loop as long as the condition is true.
+
+A `do/while` loop always be executed at least once, **even if the condition is false**, because the code block is executed before the condition is tested:
 
 ```java
 int i = 1;      // starting value for the loop counter
@@ -1449,7 +1451,31 @@ System.out.println(answer);
 
 ## 13. Arrays
 
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
 ### 13.1 Creating arrays
+
+To declare an array, define the variable type with square brackets [ ] :
+
+```java
+String[] cars;
+```
+
+We have now declared a variable that holds an array of strings. To insert values to it, you can place the values in a comma-separated list, inside curly braces { }:
+
+```java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+```
+
+
+To create an array of integers, you could write:
+
+```java
+int[] myNum = {10, 20, 30, 40};
+```
+
+Example: 
+</br>
 
 ```java
 // creates an int array with 5 spaces for numbers
@@ -1770,9 +1796,20 @@ double d = Double.parseDouble("3.14"); // converts text into a double
 ### Loops
 
 ```java
-for (int i = 0; i < 5; i++) { }   // repeats a set number of times
-while (condition) { }             // repeats while the condition is true
-do { } while (condition);         // runs once first, then repeats while true
+for (int i = 0; i < 5; i++) {
+        // repeats a set number of times
+}   
+
+--------------------------------------
+while (condition) {
+        // repeats while the condition is true
+}             
+
+--------------------------------------
+do {
+
+}
+while (condition);         // runs once first, then repeats while true
 ```
 
 ### Arrays
