@@ -1158,9 +1158,61 @@ public class Person {
 
 </br>
 
-### 10.5 Access modifiers and packages
+### 10.5 Access Modifiers and Class Keywords in Java
 
-Important modifier:
+`public` and `private` are access modifiers because they control visibility and access. `static` is a non-access modifier because it tells Java that a member belongs to the class itself rather than to an object. `class` is a keyword used to define a class.
+
+* **public**
+
+The `public` keyword means a class, method, or constructor can be accessed from other classes. It makes that part of the program available outside its own class.
+
+* **private**
+
+The `private` keyword means a field or method can only be used inside the same class. It is commonly used to protect data and support encapsulation.
+
+* **static**
+
+The `static` keyword means a variable or method belongs to the class itself rather than to a specific object. A static member can be used without creating an object of the class.
+
+* **class**
+
+The `class` keyword is used to create a class in Java. A class is a blueprint or template for objects. It defines the fields and methods that objects of that class will have.
+Class is not like public, private, or static. Those are modifiers or keywords that describe access or behavior. 
+`class` is the keyword that actually declares the class itself.
+
+
+Example: 
+
+```java
+public class CellPhone {
+    private String model;   // only this class can access it
+    private String owner;
+    public CellPhone(String model, String owner) {  // public constructor
+        this.model = model;
+        this.owner = owner;
+    }
+    public void displayInfo() {   // can be called from other classes
+        System.out.println(model + " belongs to " + owner);
+    }
+    public static void printCompany() {   // belongs to the class, not one object
+        System.out.println("CellPhone Company");
+    }
+}
+```
+
+
+### Summary 
+* **public** = open to other classes
+* **private** = only inside this class
+* **static** = belongs to the class itself
+* **class** = blueprint for objects
+
+</br>
+
+
+### 10.6 Access modifiers and packages
+
+**Important modifier**:
 
 - `private` hides fields and methods from code outside the class
 
@@ -1178,6 +1230,7 @@ com.pluralsight.Student
 ```
 
 These are treated as different classes because they live in different packages.
+
 
 
 ---
