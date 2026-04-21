@@ -1059,6 +1059,14 @@ Example idea:
 
 ### 10.3 Fields, constructors, getters, and setters
 
+A constructor is a special part of a class that runs when an object is created. Its purpose is to give the object its starting values by initializing its fields.
+
+### Key Points About Constructors
+* A constructor name must be exactly the same as the class name.
+* A constructor can have no parameters or one or more parameters.
+* A class can have more than one constructor. This is called constructor overloading.
+* Constructors help make sure an object starts in a valid and usable state.
+
 ```java
 // defines a class named Hotel
 public class Hotel {
