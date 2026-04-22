@@ -54,27 +54,28 @@ I'm tired
     4. [Converting Strings to numbers and dates](#94-converting-strings-to-numbers-and-dates)
     5. [StringBuilder](#95-stringbuilder)
 10. [Object-Oriented Programming and Encapsulation](#10-object-oriented-programming-and-encapsulation)
-1. [Class vs object](#101-class-vs-object)
-2. [Encapsulation](#102-encapsulation)
-3. [Fields, constructors, getters, and setters](#103-fields-constructors-getters-and-setters)
-4. [Derived properties](#104-derived-properties)
-5. [Access modifiers and packages](#105-access-modifiers-and-packages)
+    1. [Class vs object](#101-class-vs-object)
+    2. [Encapsulation](#102-encapsulation)
+    3. [Fields, constructors, getters, and setters](#103-fields-constructors-getters-and-setters)
+    4. [Derived properties](#104-derived-properties)
+    5. [Public, Private, Static, and Class](#105-public-private-static-and-class)
+    6. [Access modifiers and packages](#106-access-modifiers-and-packages)
 11. [Overloading and Method Signatures](#11-overloading-and-method-signatures)
-1. [What a signature is](#111-what-a-signature-is)
-2. [Overloading methods](#112-overloading-methods)
-3. [Overloading constructors](#113-overloading-constructors)
+    1. [What a signature is](#111-what-a-signature-is)
+    2. [Overloading methods](#112-overloading-methods)
+    3. [Overloading constructors](#113-overloading-constructors)
 12. [Loops](#12-loops)
-1. [while](#121-while)
-2. [do/while](#122-dowhile)
-3. [for](#123-for)
-4. [break and continue](#124-break-and-continue)
-5. [Loop scope and common mistakes](#125-loop-scope-and-common-mistakes)
+    1. [while](#121-while)
+    2. [do/while](#122-dowhile)
+    3. [for](#123-for)
+    4. [break and continue](#124-break-and-continue)
+    5. [Loop scope and common mistakes](#125-loop-scope-and-common-mistakes)
 13. [Arrays](#13-arrays)
-1. [Creating arrays](#131-creating-arrays)
-2. [Indexes](#132-indexes)
-3. [for and for-each loops with arrays](#133-for-and-for-each-loops-with-arrays)
-4. [Passing and returning arrays](#134-passing-and-returning-arrays)
-5. [Sorting and copying arrays](#135-sorting-and-copying-arrays)
+    1. [Creating arrays](#131-creating-arrays)
+    2. [Indexes](#132-indexes)
+    3. [for and for-each loops with arrays](#133-for-and-for-each-loops-with-arrays)
+    4. [Passing and returning arrays](#134-passing-and-returning-arrays)
+    5. [Sorting and copying arrays](#135-sorting-and-copying-arrays)
 14. [Common Quiz Mistakes to Remember](#14-common-quiz-mistakes-to-remember)
 15. [Practice Problems](#15-practice-problems)
 16. [Quick Cheat Sheet](#16-quick-cheat-sheet)
@@ -1059,6 +1060,14 @@ Example idea:
 
 ### 10.3 Fields, constructors, getters, and setters
 
+A constructor is a special part of a class that runs when an object is created. Its purpose is to give the object its starting values by initializing its fields.
+
+### Key Points About Constructors
+* A constructor name must be exactly the same as the class name.
+* A constructor can have no parameters or one or more parameters.
+* A class can have more than one constructor. This is called constructor overloading.
+* Constructors help make sure an object starts in a valid and usable state.
+
 ```java
 // defines a class named Hotel
 public class Hotel {
@@ -1150,9 +1159,61 @@ public class Person {
 
 </br>
 
-### 10.5 Access modifiers and packages
+### 10.5 Public, Private, Static, and Class
 
-Important modifier:
+`public` and `private` are access modifiers because they control visibility and access. `static` is a non-access modifier because it tells Java that a member belongs to the class itself rather than to an object. `class` is a keyword used to define a class.
+
+* **public**
+
+The `public` keyword means a class, method, or constructor can be accessed from other classes. It makes that part of the program available outside its own class.
+
+* **private**
+
+The `private` keyword means a field or method can only be used inside the same class. It is commonly used to protect data and support encapsulation.
+
+* **static**
+
+The `static` keyword means a variable or method belongs to the class itself rather than to a specific object. A static member can be used without creating an object of the class.
+
+* **class**
+
+The `class` keyword is used to create a class in Java. A class is a blueprint or template for objects. It defines the fields and methods that objects of that class will have.
+Class is not like public, private, or static. Those are modifiers or keywords that describe access or behavior. 
+`class` is the keyword that actually declares the class itself.
+
+
+Example: 
+
+```java
+public class CellPhone {
+    private String model;   // only this class can access it
+    private String owner;
+    public CellPhone(String model, String owner) {  // public constructor
+        this.model = model;
+        this.owner = owner;
+    }
+    public void displayInfo() {   // can be called from other classes
+        System.out.println(model + " belongs to " + owner);
+    }
+    public static void printCompany() {   // belongs to the class, not one object
+        System.out.println("CellPhone Company");
+    }
+}
+```
+
+
+### Summary 
+* **public** = open to other classes
+* **private** = only inside this class
+* **static** = belongs to the class itself
+* **class** = blueprint for objects
+
+</br>
+
+
+### 10.6 Access modifiers and packages
+
+**Important modifier**:
 
 - `private` hides fields and methods from code outside the class
 
@@ -1170,6 +1231,7 @@ com.pluralsight.Student
 ```
 
 These are treated as different classes because they live in different packages.
+
 
 
 ---
@@ -1279,7 +1341,9 @@ System.out.println(sum);   // prints the final total
 
 ### 12.2 do/while
 
-A `do/while` loop always runs at least once.
+The `do/while` loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true. Then it will repeat the loop as long as the condition is true.
+
+A `do/while` loop always be executed at least once, **even if the condition is false**, because the code block is executed before the condition is tested:
 
 ```java
 int i = 1;      // starting value for the loop counter
@@ -1441,7 +1505,31 @@ System.out.println(answer);
 
 ## 13. Arrays
 
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
 ### 13.1 Creating arrays
+
+To declare an array, define the variable type with square brackets [ ] :
+
+```java
+String[] cars;
+```
+
+We have now declared a variable that holds an array of strings. To insert values to it, you can place the values in a comma-separated list, inside curly braces { }:
+
+```java
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+```
+
+
+To create an array of integers, you could write:
+
+```java
+int[] myNum = {10, 20, 30, 40};
+```
+
+Example: 
+</br>
 
 ```java
 // creates an int array with 5 spaces for numbers
@@ -1762,9 +1850,20 @@ double d = Double.parseDouble("3.14"); // converts text into a double
 ### Loops
 
 ```java
-for (int i = 0; i < 5; i++) { }   // repeats a set number of times
-while (condition) { }             // repeats while the condition is true
-do { } while (condition);         // runs once first, then repeats while true
+for (int i = 0; i < 5; i++) {
+        // repeats a set number of times
+}   
+
+--------------------------------------
+while (condition) {
+        // repeats while the condition is true
+}             
+
+--------------------------------------
+do {
+
+}
+while (condition);         // runs once first, then repeats while true
 ```
 
 ### Arrays
