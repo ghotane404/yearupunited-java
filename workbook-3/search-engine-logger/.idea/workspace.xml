@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac790d4b-14f6-4a8e-90b8-95efe396dbb8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/employees.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/src/main/java/com/pluralsight/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/src/main/java/com/pluralsight/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../workbook-2/class-exercise/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../workbook-2/class-exercise/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../workbook-2/roll-the-dice/src/main/java/com/pluralsight/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../workbook-2/workshop-demo-final/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../adventure-time" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/tedt.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payroll-calculator2/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yearup-2026-spring-demos" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../workbook-2/full-name-parser/src/main/java/com/pluralsight/FullNameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-2/full-name-parser/src/main/java/com/pluralsight/FullNameApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../payroll-calculator2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../payroll-calculator2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../payroll-calculator2/src/main/java/com/pluralsight/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../payroll-calculator2/src/main/java/com/pluralsight/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../payroll-calculator2/src/main/java/com/pluralsight/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../payroll-calculator2/src/main/java/com/pluralsight/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
