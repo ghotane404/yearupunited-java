@@ -20,6 +20,5 @@
     <mapping directory="$PROJECT_DIR$/workshops/financial-calculators" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/workshops/online-store" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/yearup-2026-spring-demos" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/yearup-java" vcs="Git" />
   </component>
 </project>

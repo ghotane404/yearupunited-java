@@ -7,23 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="strings-review-and-demo" />
-        <module name="string-application" />
-        <module name="full-name-parser" />
-        <module name="cellphone-service" />
-        <module name="data-types-demo-starter" />
-        <module name="math-application" />
-        <module name="conditions-demo-starter" />
         <module name="TheaterReservations" />
+        <module name="string-application" />
         <module name="basic-calculator" />
-        <module name="financial-calculators" />
         <module name="full-name-generator" />
+        <module name="full-name-parser" />
         <module name="my-second-repo" />
         <module name="functions-demo-starter" />
         <module name="sandwich-shop" />
         <module name="method-practice" />
+        <module name="cellphone-service" />
         <module name="user-input-output-demo-starter" />
         <module name="payroll-calculator" />
-        <module name="yearup-java" />
+        <module name="data-types-demo-starter" />
+        <module name="math-application" />
+        <module name="conditions-demo-starter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -34,6 +32,7 @@
       <module name="conditions-demo-starter (2)" target="26" />
       <module name="data-types-demo-starter (1)" target="26" />
       <module name="data-types-demo-starter (2)" target="26" />
+      <module name="financial-calculators" target="26" />
       <module name="functions-demo-starter (1)" target="26" />
       <module name="functions-demo-starter (2)" target="26" />
       <module name="java-syntax" target="26" />
@@ -46,6 +45,7 @@
       <module name="strings-review-and-demo (2)" target="26" />
       <module name="user-input-output-demo-starter (1)" target="26" />
       <module name="user-input-output-demo-starter (2)" target="26" />
+      <module name="yearup-java" target="26" />
     </bytecodeTargetLevel>
   </component>
 </project>

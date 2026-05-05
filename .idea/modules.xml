@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-3/intro-to-classes-final/ClassesDemo.iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-3/intro-to-classes-final/ClassesDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-05/MathApp-setup/MathApp-setup.iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-05/MathApp-setup/MathApp-setup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-1/arrays-strings-demo/arrays-strings-demo.iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-1/arrays-strings-demo/arrays-strings-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/binary-conversion/binary-conversion.iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/binary-conversion/binary-conversion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/conditions-demo-final/conditions-demo-starter (1).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/conditions-demo-final/conditions-demo-starter (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/conditions-demo-starter/conditions-demo-starter (2).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/conditions-demo-starter/conditions-demo-starter (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-03/data-types-demo-final/data-types-demo-starter (1).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-03/data-types-demo-final/data-types-demo-starter (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-03/data-types-demo-starter/data-types-demo-starter (2).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-03/data-types-demo-starter/data-types-demo-starter (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/functions-demo-final/functions-demo-starter (1).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/functions-demo-final/functions-demo-starter (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/functions-demo-starter/functions-demo-starter (2).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/functions-demo-starter/functions-demo-starter (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/java-syntax/java-syntax.iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/java-syntax/java-syntax.iml" />
       <module fileurl="file://$PROJECT_DIR$/pluralsight.iml" filepath="$PROJECT_DIR$/pluralsight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/review-demos/review-demos.iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/review-demos/review-demos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-1/review-financial-calculators/review-financial-calculators.iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-1/review-financial-calculators/review-financial-calculators.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-2/strings-review-and-demo-final/strings-review-and-demo (1).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-2/strings-review-and-demo-final/strings-review-and-demo (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-2/strings-review-and-demo-starter/strings-review-and-demo (2).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-02/day-2/strings-review-and-demo-starter/strings-review-and-demo (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/user-input-output-demo-final/user-input-output-demo-starter (1).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/user-input-output-demo-final/user-input-output-demo-starter (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/user-input-output-demo-starter/user-input-output-demo-starter (2).iml" filepath="$PROJECT_DIR$/workbook-1/yearup-2026-spring-demos/week-01/day-04/user-input-output-demo-starter/user-input-output-demo-starter (2).iml" />
     </modules>
   </component>
 </project>
