@@ -10,7 +10,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="basic-calculator" target="26" />
       <module name="binary-conversion" target="26" />
+      <module name="workbook-1" target="26" />
     </bytecodeTargetLevel>
   </component>
 </project>
