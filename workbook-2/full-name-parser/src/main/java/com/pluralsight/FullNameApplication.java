@@ -7,7 +7,6 @@ public class FullNameApplication {
 
         System.out.print("Please enter your name: ");
         String fullName = scanner.nextLine();
-//        String fullName = "loki          odin";
 
         fullName = fullName.trim(); // removing any white space from the full name
         splitAndPrintName(fullName); // calls the method splitAndPrintName where all the names are printed
