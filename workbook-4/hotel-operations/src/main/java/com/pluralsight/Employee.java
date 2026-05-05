@@ -1,15 +1,15 @@
 package com.pluralsight;
 
 public class Employee {
-//    Employee
-//    The Employee class is used to store and calculate payroll information about and employee. It should manage the following information using private variables:
-//    employeeId, name, department, payRate, hoursWorked.
 
     private int employeeId;
     private String name;
     private String department;
     private double payRate;
     private double hoursWorked;
+    private double totalPay;
+    private double regularHours;
+    private double overTimeHours;
 
     Employee (int employeeId, String name, String department, double payRate, double hoursWorked){
         this.employeeId = employeeId;
@@ -17,13 +17,10 @@ public class Employee {
         this.department = department;
         this.payRate = payRate;
         this.hoursWorked = hoursWorked;
+        this.totalPay = totalPay;
+        this.regularHours = regularHours;
+        this.overTimeHours = overTimeHours;
     }
-
-
-//    Include the following derived getters (you may also include others as necessary):
-//    getTotalPay
-//    getRegularHours
-//    getOvertimeHours
 
     public int getEmployeeId() {
         return this.employeeId;
@@ -45,16 +42,32 @@ public class Employee {
         return this.hoursWorked;
     }
 
-    public void getTotalPay() {
-
+    public double getTotalPay() {
+        return this.totalPay;
     }
 
-    public void getRegularHours() {
-
+    public double getRegularHours() {
+        return this.regularHours;
     }
 
-    public void getOvertimeHours() {
-
+    public double getOvertimeHours() {
+        return this.overTimeHours;
     }
+
+    public void punchIn(int time){
+        int time = 10;
+//        int time = 12;
+//        int time = 14;
+    }
+
+    public void punchOut(int time){
+//        int time = 10;
+//        int time = 12;
+        int time = 14;
+    }
+
+//    public void punchTimeCard (){
+//
+//    }
 
 }

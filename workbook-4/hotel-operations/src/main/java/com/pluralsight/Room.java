@@ -2,45 +2,53 @@ package com.pluralsight;
 
 public class Room {
 
-//    Room
-//    The Room class is responsible for knowing everything related to a hotel room. A room is
-//    only available if it is clean and not currently occupied. Create the class with the following getters:
-//    getNumberOfBeds()
-//    getPrice()
-//    isOccupied()
-//    isDirty()
-//    isAvailable()
-//
-//    HINT: getters that start with 'is' are Boolean getters. isOccupied() is a getter for the
-//    attribute occupied
+    private int numberOfBeds;
+    private double price;
+    private boolean isOccupied;
+    private boolean isDirty;
+    private boolean isAvailable;
 
-
-    public void getNumberOfBeds(){
-
+    Room (int numberOfBeds, double price, boolean isOccupied, boolean isDirty, boolean isAvailable){
+        this.numberOfBeds = numberOfBeds;
+        this.price = price;
+        this.isOccupied = false;
+        this.isDirty = false;
+        this.isAvailable = true;
     }
 
-    public void getPrice(){
+    public int getNumberOfBeds(){
+        return this.numberOfBeds;
+    }
 
-
+    public double getPrice(){
+        return this.price;
     }
 
     public boolean isOccupied(){
-        return true;
-
+        return this.isOccupied;
     }
 
+    public boolean isDirty() { return this.isDirty; }
 
-    public void isDirty(){
-
-
+    public boolean isAvailable(){
+        if (!isDirty && is !isOccupied){
+            return isAvailable;
+        }
     }
 
-
-    public void isAvailable(){
-
-
+    public void checkIn(){
+        isDirty = true;
+        isOccupied = true;
     }
 
+    public void checkout(){
+        isDirty = true;
+        isOccupied = false;
+    }
+
+    public void cleanroom(){
+        isDirty = false;
+    }
 
 
 }

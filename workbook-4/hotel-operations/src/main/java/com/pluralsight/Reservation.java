@@ -1,57 +1,57 @@
 package com.pluralsight;
 
 public class Reservation {
-
-    //    Reservation
-//    The Reservation class is responsible for storing information related to a guest stay.
-//    Determine which backing variables you need to create and create a constructor to set
-//    initial values.
-//
-//    The room type can be either "king" or "double". If the room type is "king" the price per
-//    night is $139.00 if the room type is "double" the price per night is $124.00
-//    If the stay is over a weekend, the price per night should increase by 10%
-//
-//    Create the class with the following getters and setters:
-//    getRoomType()
-//    setRoomType(String roomType)
-//    getPrice()
-//    getNumberOfNights()
-//    setNumberOfNights(int numberOfNights)
-//    isWeekend()
-//    setIsWeekend(boolean isWeekend)
-//    getReservationTotal()
+    // constants
+    private final double KING_PRICE = 139.0;
+    private final double DOUBLE_PRICE = 124.0;
+    private final double WEEKEND_MULTIPLIER = 1.1;
 
 
-    public void getRoomType(){
+    private String roomType;
+    private double price;
+    private int numberOfNights;
+    private boolean isWeekend;
+    private double reservationTotal;
 
+
+    Reservation(String roomType, double price, int numberOfNights, boolean isWeekend, double reservationTotal) {
+        this.roomType = roomType;
+        this.price = price;
+        this.numberOfNights = numberOfNights;
+        this.isWeekend = true;
+        this.reservationTotal = reservationTotal;
+    }
+
+    public String getRoomType(){
+        return this.roomType;
     }
 
     public void setRoomType(String roomType){
-
+        this.roomType = roomType;
     }
 
-    public void getPrice(){
-
+    public double getPrice(){
+        return this.price;
     }
 
-    public void getNumberOfNights(){
-
+    public int getNumberOfNights(){
+        return this.numberOfNights;
     }
 
     public void setNumberOfNights(int numberOfNights){
-
+        this.numberOfNights = numberOfNights;
     }
 
-    public void isWeekend(){
-
+    public boolean isWeekend(){
+        return this.isWeekend;
     }
 
     public void setIsWeekend(boolean isWeekend){
-
+        this.isWeekend = isWeekend;
     }
 
-    public void getReservationTotal(){
-
+    public double getReservationTotal(){
+        return this.reservationTotal;
     }
 
 }
