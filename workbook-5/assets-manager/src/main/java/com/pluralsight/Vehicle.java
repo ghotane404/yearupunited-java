@@ -20,7 +20,6 @@ public class Vehicle extends Asset{
 //    all getters / setters
 //    getValue() : double (override)
 
-
     public String getMakeModel(){
         return makeModel;
     }
@@ -52,14 +51,24 @@ public class Vehicle extends Asset{
 
 // A car's value is determined as
 // 0-3 years old - 3% reduced value of cost per year
-    // year <= 3
+    // 0 < year <= 3
+    // .3 * makeModel
+
 
 // 4-6 years old - 6% reduced value of cost per year
+    // 4 <= year <= 6
+
+
 // 7-10 years old - 8% reduced value of cost per year
+    // 7 <= year <= 10
+
+
 // over 10 years old - $1000.00
+    // year > 10
+
+
 // MINUS reduce final value by 25% if over 100,000 miles
 // unless makeModel contains word Honda or Toyota
-
 
 
 }

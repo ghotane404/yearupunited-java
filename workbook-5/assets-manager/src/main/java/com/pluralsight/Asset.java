@@ -5,7 +5,6 @@ public class Asset {
 //    Properties: description : String
 //    dateAcquired : String
 //    originalCost : double
-
     private String description;
     private String dataAcquired;
     private double originalCost;
@@ -13,7 +12,6 @@ public class Asset {
 //    Methods: constructor
 //    all getters / setters
 //    getValue() : double // returns original cost
-
     public Asset(String description, String dataAcquired, double originalCost){
         this.description = description;
         this.dataAcquired = dataAcquired;
