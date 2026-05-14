@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import com.pluralsight.models.Card;
+import com.pluralsight.models.Suits;
 import org.junit.jupiter.api.Test;
 import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -41,12 +43,12 @@ class CardTest {
             assertEquals(row.getValue(), actual, "Becasue the card is a " + card.getFaceValue() + " of " + row.getValue());
 
         }
-
-        // act
-        int actual = card.getPointValue();
-
-        // assert
-        assertEquals(row.getValue(), actual, "because I created a Queen of Spades");
+//
+//        // act
+//        int actual = card.getPointValue();
+//
+//        // assert
+//        assertEquals(row.getValue(), actual, "because I created a Queen of Spades");
 
     }
 

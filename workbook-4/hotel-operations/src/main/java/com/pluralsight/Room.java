@@ -3,50 +3,73 @@ package com.pluralsight;
 public class Room {
 
     private int numberOfBeds;
+//    private String roomType;
     private double price;
     private boolean isOccupied;
     private boolean isDirty;
     private boolean isAvailable;
 
-    Room (int numberOfBeds, double price, boolean isOccupied, boolean isDirty, boolean isAvailable){
+//    public Room(String roomType, int numberOfBeds, double price) {
+//        this.roomType = roomType;
+//        this.numberOfBeds = numberOfBeds;
+//        this.price = price;
+//    }
+
+    public Room(int numberOfBeds, double price) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
-        this.isOccupied = false;
-        this.isDirty = false;
-        this.isAvailable = true;
+        this.isOccupied = isOccupied;
+        this.isDirty = isDirty;
+
     }
 
-    public int getNumberOfBeds(){
-        return this.numberOfBeds;
+//    public Room(String roomType, int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
+//        // if you want to call another constructor - this MUST BE THE FIRST LINE of code
+//        this(roomType, numberOfBeds, price);
+//        this.isOccupied = isOccupied;
+//        this.isDirty = isDirty;
+//    }
+
+    public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
+        // if you want to call another constructor - this MUST BE THE FIRST LINE of code
+        this(numberOfBeds, price);
+        this.isOccupied = isOccupied;
+        this.isDirty = isDirty;
     }
 
-    public double getPrice(){
-        return this.price;
+    public int getNumberOfBeds() {
+        return numberOfBeds;
     }
 
-    public boolean isOccupied(){
-        return this.isOccupied;
+    public double getPrice() {
+        return price;
     }
 
-    public boolean isDirty() { return this.isDirty; }
-
-    public boolean isAvailable(){
-        if (!isDirty && is !isOccupied){
-            return isAvailable;
-        }
+    public boolean isOccupied() {
+        return isOccupied;
     }
 
-    public void checkIn(){
+    public boolean isDirty() {
+        return isDirty;
+    }
+
+    public boolean isAvailable() {
+
+        return !isDirty && !isOccupied;
+
+    }
+
+    public void checkIn() {
         isDirty = true;
         isOccupied = true;
     }
 
-    public void checkout(){
+    public void checkOut() {
         isDirty = true;
         isOccupied = false;
     }
 
-    public void cleanroom(){
+    public void cleanRoom() {
         isDirty = false;
     }
 

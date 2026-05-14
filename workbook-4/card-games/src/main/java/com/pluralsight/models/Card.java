@@ -1,7 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.models;
 
 public class Card {
-
     private Suits suit;
     private String faceValue;
     private int value;
@@ -20,7 +19,6 @@ public class Card {
     }
 
     public String getColor(){
-
         switch (suit){
             case Suits.HEARTS, Suits.DIAMONDS -> {
                 return "Red";
@@ -38,6 +36,4 @@ public class Card {
             default -> Integer.parseInt(faceValue);
         };
     }
-
-
 }

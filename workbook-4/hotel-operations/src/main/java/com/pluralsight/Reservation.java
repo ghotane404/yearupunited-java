@@ -30,9 +30,13 @@ public class Reservation {
         this.roomType = roomType;
     }
 
+
+
     public double getPrice(){
         return this.price;
     }
+
+
 
     public int getNumberOfNights(){
         return this.numberOfNights;
@@ -42,6 +46,8 @@ public class Reservation {
         this.numberOfNights = numberOfNights;
     }
 
+
+
     public boolean isWeekend(){
         return this.isWeekend;
     }
@@ -49,6 +55,8 @@ public class Reservation {
     public void setIsWeekend(boolean isWeekend){
         this.isWeekend = isWeekend;
     }
+
+
 
     public double getReservationTotal(){
         return this.reservationTotal;
