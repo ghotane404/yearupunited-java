@@ -12,8 +12,8 @@ public class House extends Asset{
     private static final double POOR = 80;
     private static final double LOT_VALUE_PER_SQUARE_FOOT = .25;
 
-    public House(String description, String dataAcquired, double originalCost, String address, int condition, int squareFoot, int lotSize) {
-        super(description, dataAcquired, originalCost);
+    public House(String description, String dateAcquired, double originalCost, String address, int condition, int squareFoot, int lotSize) {
+        super(description, dateAcquired, originalCost);
         this.address = address;
         this.condition = condition;
         this.squareFoot = squareFoot;
@@ -22,22 +22,13 @@ public class House extends Asset{
 
     @Override
     public double getValue(){
-        double value = 0;
-
-        switch(condition){
-            case 1:
-                value = (EXCELLENT * squareFoot) + (LOT_VALUE_PER_SQUARE_FOOT * lotSize);
-                break;
-            case 2:
-                value = (GOOD * squareFoot) + (LOT_VALUE_PER_SQUARE_FOOT * lotSize);
-                break;
-            case 3:
-                value = (FAIR * squareFoot) + (LOT_VALUE_PER_SQUARE_FOOT + lotSize);
-                break;
-            case 4:
-                value = (POOR * squareFoot) + (LOT_VALUE_PER_SQUARE_FOOT * lotSize);
-                break;
-        }
+        double value = switch (condition) {
+            case 1 -> (EXCELLENT * squareFoot) + (LOT_VALUE_PER_SQUARE_FOOT * lotSize);
+            case 2 -> (GOOD * squareFoot) + (LOT_VALUE_PER_SQUARE_FOOT * lotSize);
+            case 3 -> (FAIR * squareFoot) + (LOT_VALUE_PER_SQUARE_FOOT + lotSize);
+            case 4 -> (POOR * squareFoot) + (LOT_VALUE_PER_SQUARE_FOOT * lotSize);
+            default -> 0;
+        };
         return value;
     }
 
@@ -72,5 +63,4 @@ public class House extends Asset{
     public void setLotSize(int lotSize){
         this.lotSize = lotSize;
     }
-
 }

@@ -1,29 +1,15 @@
 package com.pluralsight;
-import java.util.*;
 
 public class Asset {
-//    Properties: description : String
-//    dateAcquired : String
-//    originalCost : double
     private String description;
     private String dataAcquired;
     private double originalCost;
+    private double value;
 
-//    Methods: constructor
-//    all getters / setters
-//    getValue() : double // returns original cost
-    public Asset(String description, String dataAcquired, double originalCost){
+    public Asset(String description, String dateAcquired, double originalCost){
         this.description = description;
-        this.dataAcquired = dataAcquired;
+        this.dataAcquired = dateAcquired;
         this.originalCost = originalCost;
-    }
-
-    public void getConstructor(){
-
-    }
-
-    public void setConstructor(){
-
     }
 
     public String getDescription(){

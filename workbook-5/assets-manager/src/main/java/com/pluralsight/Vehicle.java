@@ -1,74 +1,116 @@
 package com.pluralsight;
 
-public class Vehicle extends Asset{
-//    Properties: makeModel : String
-//    year : int
-//    odometer : int
+import java.util.Objects;
+
+public class Vehicle extends Asset {
     private String makeModel;
     private int year;
     private int odometer;
-    private double something;
+    private int carYear;
+    private double finalValue;
+    private double carValue;
 
-    public Vehicle(String description, String dataAcquired, double originalCost, String makeModel, int year, int odometer) {
-        super(description, dataAcquired, originalCost);
+    private double LOW_AGE_DEPRECIATION_RATE = .03;
+    private double MID_AGE_DEPRECIATION_RATE = .06;
+    private double HIGH_AGE_DEPRECIATION_RATE = .08;
+    private double OVER_TEN_YEARS_VALUE = 1000;
+    private double HIGH_MILEAGE_PENALTY_RATE = .25;
+
+
+    public Vehicle(String description, String dateAcquired, double originalCost, String makeModel, int year, int odometer) {
+        super(description, dateAcquired, originalCost);
         this.makeModel = makeModel;
         this.year = year;
         this.odometer = odometer;
     }
 
-//    Methods: constructor
-//    all getters / setters
-//    getValue() : double (override)
-
-    public String getMakeModel(){
+    public String getMakeModel() {
         return makeModel;
     }
 
-    public void setMakeModel(String makeModel){
+    public void setMakeModel(String makeModel) {
         this.makeModel = makeModel;
     }
 
-    public int getYear(){
+    public int getYear() {
         return year;
     }
 
-    public void setYear(int year){
+    public void setYear(int year) {
         this.year = year;
     }
 
-    public int getOdometer(){
+    public int getOdometer() {
         return odometer;
     }
 
-    public void setOdometer(int odometer){
+    public void setOdometer(int odometer) {
         this.odometer = odometer;
     }
 
-    @Override
-    public double getValue(){
-        return something;
+    public int getCarYear() {
+        carYear = Integer.parseInt(getDataAcquired()) - year;
+        return carYear;
     }
 
-// A car's value is determined as
-// 0-3 years old - 3% reduced value of cost per year
-    // 0 < year <= 3
-    // .3 * makeModel
-
-
-// 4-6 years old - 6% reduced value of cost per year
-    // 4 <= year <= 6
-
-
-// 7-10 years old - 8% reduced value of cost per year
-    // 7 <= year <= 10
-
-
-// over 10 years old - $1000.00
-    // year > 10
-
-
-// MINUS reduce final value by 25% if over 100,000 miles
-// unless makeModel contains word Honda or Toyota
-
-
+    @Override
+    public double getValue() {
+        if (Objects.equals(makeModel, "Honda") || Objects.equals(makeModel, "Toyota")) {
+            if (0 <= getCarYear() && getCarYear() <= 3) {
+                carValue = (1 - LOW_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                return carValue;
+            }
+            else if (4 <= getCarYear() && getCarYear() <= 6) {
+                carValue = (1 - MID_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                return carValue;
+            }
+            else if (7 <= getCarYear() && getCarYear() <= 10) {
+                carValue = (1 - HIGH_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                return carValue;
+            }
+            else {
+                return OVER_TEN_YEARS_VALUE;
+            }
+        }
+        else {
+            if (0 <= getCarYear() && getCarYear() <=3){
+                if (odometer > 100000){
+                    carValue = (1 - LOW_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                    return (carValue * (1 - HIGH_MILEAGE_PENALTY_RATE));
+                }
+                else {
+                    carValue = (1 - LOW_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                    return carValue;
+                }
+            }
+            else if (4 <= getCarYear() && getCarYear() <= 6) {
+                if (odometer > 100000){
+                    carValue = (1 - MID_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                    return (carValue * (1 - HIGH_MILEAGE_PENALTY_RATE));
+                }
+                else {
+                    carValue = (1 - MID_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                    return carValue;
+                }
+            }
+            else if (7 <= getCarYear() && getCarYear() <= 10) {
+                if (odometer > 100000){
+                    carValue = (1 - LOW_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                    return (carValue * (1 - HIGH_MILEAGE_PENALTY_RATE));
+                }
+                else {
+                    carValue = (1 - LOW_AGE_DEPRECIATION_RATE * getCarYear()) * getOriginalCost();
+                    return carValue;
+                }
+            }
+            else {
+                if (odometer > 100000){
+                    return (OVER_TEN_YEARS_VALUE * (1 - HIGH_MILEAGE_PENALTY_RATE));
+                }
+                else {
+                    return OVER_TEN_YEARS_VALUE;
+                }
+            }
+        }
+    }
 }
