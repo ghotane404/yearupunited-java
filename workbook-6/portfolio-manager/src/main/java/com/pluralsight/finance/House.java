@@ -12,10 +12,13 @@ public class House extends FixedAsset {
         this.bedrooms = bedrooms;
     }
 
+    // calculate house price here?
+
 
     @Override
     public double getValue(){
-        return 0;
+        return getMarketValue();
+//        return 100;
     }
 
 }

@@ -20,7 +20,8 @@ public class CreditCard implements Valuable {
     }
 
     public double getValue(){
-        return 0;
+//        return 100;
+        return balance;
     }
 
 }

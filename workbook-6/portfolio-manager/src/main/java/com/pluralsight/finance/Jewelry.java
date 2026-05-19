@@ -8,6 +8,12 @@ public class Jewelry extends FixedAsset {
         this.karat = karat;
     }
 
+    @Override
+    public double getValue(){
+//        return 100;
+        return karat;
+    }
+
 //    public double getKarat(){
 //        return karat;
 //    }
@@ -16,11 +22,6 @@ public class Jewelry extends FixedAsset {
 //    public Jewelry asset() {
 //        return null;
 //    }
-
-    @Override
-    public double getValue(){
-        return karat;
-    }
 
 
 }

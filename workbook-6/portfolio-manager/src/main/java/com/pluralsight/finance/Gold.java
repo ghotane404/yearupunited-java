@@ -9,12 +9,13 @@ public class Gold extends FixedAsset {
     }
 
     public double getWeight(){
-        return weight;
+        return 0;       // calculate gold value here?
     }
 
     @Override
     public double getValue(){
-        return weight;
+//        return 100;
+        return getMarketValue();
     }
 
 }
