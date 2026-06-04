@@ -22,6 +22,11 @@ public class Program {
 		System.out.println("Please type the first or last name you are searching for: ");
 		String name = scanner.nextLine().trim().toLowerCase();
 
+
+		/* -------------------------------------------------*/
+		/* ------------------ AVERAGE AGE ------------------*/
+		/* -------------------------------------------------*/
+
 		double age = 0;
 		int count = 0;
 
@@ -33,6 +38,12 @@ public class Program {
 		double averageAge = age / count;
 		System.out.println("Average Age: " + averageAge);
 
+
+
+		/* ------------------------------------------------*/
+		/* ------------------ OLDEST AGE ------------------*/
+		/* ------------------------------------------------*/
+
 		Person oldestAge = persons.get(0);
 		for(Person person : persons) {
 			if (person.getAge() > oldestAge.getAge()){
@@ -41,6 +52,11 @@ public class Program {
 		}
 
 		System.out.println("Oldest: " + oldestAge.toString());
+
+
+		/* --------------------------------------------------*/
+		/* ------------------ YOUNGEST AGE ------------------*/
+		/* --------------------------------------------------*/
 
 		Person youngestAge = persons.get(0);
 		for(Person person : persons) {

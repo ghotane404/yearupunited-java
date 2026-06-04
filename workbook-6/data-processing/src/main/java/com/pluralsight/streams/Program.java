@@ -23,6 +23,10 @@ public class Program {
 		System.out.println("Please type the first or last name you are searching for: ");
 		String name = scanner.nextLine().trim().toLowerCase();
 
+		List<Person> adults = persons.stream()
+				.filter(person -> person.getAge() >= 18)
+				.toList();
+
 		/* starts a stream of Person objects
 		 * converts all names to lowercase and checks the first name and last name of each person
 		 * .filter(...) keeps only the items (first name and last name) that returns true

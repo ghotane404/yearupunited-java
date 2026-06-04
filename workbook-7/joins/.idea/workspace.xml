@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="46452340-0f13-43e3-9988-d6e4af5a658d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/leetcodeExampleExplained.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sampleDataTransactionsForLeetCodeQ.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sql/havingAndInner.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sql/joinExercises.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sql/joinExercises.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sql/miniExercisesSolutions.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sql/miniGroupByExercises.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sql/recapSQL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sql/selectMiniExercises.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sql/solutionsHavingAndInner.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nested-queries/extra-exercises/sqlTuesday.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/nested-queries.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../workbook-6/data-processing/src/main/java/com/pluralsight/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-6/data-processing/src/main/java/com/pluralsight/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../workbook-6/data-processing/src/main/java/com/pluralsight/streams/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../workbook-6/data-processing/src/main/java/com/pluralsight/streams/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yearup-2026-spring-demos" beforeDir="false" afterPath="$PROJECT_DIR$/../../yearup-2026-spring-demos" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3Ee27sQY3KGoJBjITGRajR0odF8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33514.17" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46452340-0f13-43e3-9988-d6e4af5a658d" name="Changes" comment="" />
+      <created>1780524553061</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780524553061</updated>
+    </task>
+    <servers />
+  </component>
+</project>
