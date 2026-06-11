@@ -13,7 +13,7 @@
 <body>
 <div th:replace="fragments/header.html :: nav"></div>
 <main class="container mt-4">
-    <h4>Employees in <span th:text="${territory.territoryId}"></span></h4>
+    <h4>Employees in <span th:text="${territory.territoryDescription}"></span> <span th:text="${territory.territoryId}"></span></h4>
 
     <a th:href="@{|/employees/new?eid=${territory.territoryId}|}">New</a>
     <table class="table table-striped">
@@ -32,7 +32,8 @@
             <td>
                 <a  th:href="@{|/employees/${employee.employeeId}|}" th:text="${employee.firstName}"></a>
             </td>
-            <td th:text="${employee.territoryId}"></td>
+<!--            <td th:text="${employee.territoryId}"></td>-->
+            <td th:text="${employee.lastName}"></td>
             <!--        <td>$ <span th:text="${employee.unitPrice}"></span></td>-->
             <td th:text="${#numbers.formatCurrency(employee.salary)}"></td>
             <td>

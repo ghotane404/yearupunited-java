@@ -26,18 +26,19 @@ public class MySqlEmployeeDao implements EmployeeDao {
 		ArrayList<Employee> employees = new ArrayList<>();
 
 		String sql = """
-				    SELECT EmployeeID
-				        , TerritoryID
-				        , FirstName
-				        , LastName
-				        , Title
-				        , HireDate
-				        , ReportsTo
-				        , Salary
-				    FROM employees
-				    WHERE TerritoryID = ?
-				    ORDER BY TerritoryID
-				            , EmployeeName
+				    SELECT e.EmployeeID
+				         , et.TerritoryID
+				         , e.FirstName
+				         , e.LastName
+				         , e.Title
+				         , e.HireDate
+				         , e.ReportsTo
+				         , e.Salary
+				          FROM Employees e
+				          JOIN EmployeeTerritories et
+				              ON e.EmployeeID = et.EmployeeID
+				          WHERE et.TerritoryID = ?
+				          ORDER BY e.LastName, e.FirstName
 				""";
 
 		SqlRowSet row = jdbcTemplate.queryForRowSet(sql, searchTerritoryId);
@@ -113,6 +114,7 @@ public class MySqlEmployeeDao implements EmployeeDao {
 		jdbcTemplate.update(sql
 				, employee.getFirstName()
 				, employee.getLastName()
+				, employee.getTerritoryId()
 				, employee.getTitle()
 				, employee.getHireDate()
 				, employee.getReportsTo()
@@ -157,7 +159,8 @@ public class MySqlEmployeeDao implements EmployeeDao {
 		String firstName = row.getString("FirstName");
 		String lastName = row.getString("LastName");
 		String title = row.getString("Title");
-		LocalDateTime hireDate = row.getTimestamp("HireDate").toLocalDateTime();
+//		LocalDateTime hireDate = row.getTimestamp("HireDate").toLocalDateTime();
+		LocalDateTime hireDate = (LocalDateTime) row.getObject("HireDate");
 		int reportsTo = row.getInt("ReportsTo");
 		double salary = row.getDouble("Salary");
 
