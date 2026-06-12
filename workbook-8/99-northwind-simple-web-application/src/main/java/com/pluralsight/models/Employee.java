@@ -9,17 +9,17 @@ public class Employee {
 	private String lastName;
 	private String title;
 	private LocalDateTime hireDate;
-	private int reportsTo;
+	private String notes;
 	private double salary;
 
-	public Employee(int employeeId, int territoryId, String firstName, String lastName, String title, LocalDateTime hireDate, int reportsTo, double salary) {
+	public Employee(int employeeId, int territoryId, String firstName, String lastName, String title, LocalDateTime hireDate, String notes, double salary) {
 		this.employeeId = employeeId;
 		this.territoryId = territoryId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.title = title;
 		this.hireDate = hireDate;
-		this.reportsTo = reportsTo;
+		this.notes = notes;
 		this.salary = salary;
 	}
 
@@ -74,12 +74,12 @@ public class Employee {
 		this.hireDate = hireDate;
 	}
 
-	public int getReportsTo() {
-		return reportsTo;
+	public String getNotes() {
+		return notes;
 	}
 
-	public void setReportsTo(int reportsTo) {
-		this.reportsTo = reportsTo;
+	public void setNotes(String notes) {
+		this.notes = notes;
 	}
 
 	public double getSalary() {

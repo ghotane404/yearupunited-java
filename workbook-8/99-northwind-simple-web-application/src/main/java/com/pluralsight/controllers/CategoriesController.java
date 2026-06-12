@@ -2,15 +2,12 @@ package com.pluralsight.controllers;
 
 import com.pluralsight.models.Category;
 import com.pluralsight.services.CategoryDao;
-import com.pluralsight.services.mysql.MySqlCategoryDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
+//@RestController       // time leaf, newer
 @Controller
 public class CategoriesController {
 	private CategoryDao categoryDao;
@@ -21,10 +18,10 @@ public class CategoriesController {
 	}
 
 	// list all categories
-	@GetMapping("/categories")
+	@GetMapping("/categories")      // can be named index (c# convention)
 	public String categories(Model model) {
 		model.addAttribute("categories", categoryDao.getCategories());
-		return "categories/index";
+		return "categories/index";      // points to the template index.html
 	}
 
 	// details page

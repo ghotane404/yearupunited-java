@@ -19,17 +19,18 @@ public class MySqlTerritoryDao implements TerritoryDao {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
-	public ArrayList<Territory> getTerritories() {
+	public ArrayList<Territory> getTerritoriesByRegion(int searchRegionId) {
 		ArrayList<Territory> territories = new ArrayList<>();
 
 		String sql = """
-				    SELECT TerritoryID
-				        , TerritoryDescription
-				        , RegionID
-				    FROM territories
+			    SELECT TerritoryID
+			        , TerritoryDescription
+				    , RegionID
+			    FROM territories
+			    WHERE RegionID = ?
 				""";
 
-		SqlRowSet row = jdbcTemplate.queryForRowSet(sql);
+		SqlRowSet row = jdbcTemplate.queryForRowSet(sql, searchRegionId);
 
 		while (row.next()) {
 			Territory territory = mapRowToTerritory(row);
@@ -41,14 +42,15 @@ public class MySqlTerritoryDao implements TerritoryDao {
 
 	public Territory getTerritory(int territoryId) {
 		String sql = """
-				    SELECT TerritoryID
-				        , TerritoryDescription
-				        , RegionID
-				    FROM territories
-				    WHERE TerritoryID = ?
+			    SELECT TerritoryID
+			 		, TerritoryDescription
+				    , RegionID
+			    FROM territories
+			    WHERE TerritoryID = ?
 				""";
 
 		SqlRowSet row = jdbcTemplate.queryForRowSet(sql, territoryId);
+
 		if (row.next()) {
 			Territory territory = mapRowToTerritory(row);
 			return territory;
@@ -58,27 +60,28 @@ public class MySqlTerritoryDao implements TerritoryDao {
 
 	public void addTerritory(Territory territory) {
 		String sql = """
-				        INSERT INTO territories (TerritoryID, TerritoryDescription) 
-				        VALUES (?, ?, ?)
-		""";
+		        INSERT INTO territories (TerritoryID, TerritoryDescription, RegionID) 
+		        VALUES (?, ?, ?)
+				""";
 
 		jdbcTemplate.update(sql
-		, territory.getTerritoryId()
-		, territory.getTerritoryDescription());
+		, territory.getTerritoryDescription()
+		, territory.getRegionId()
+		, territory.getRegionId());
 	}
 
 	public void updateTerritory(Territory territory) {
 		String sql = """
-				        UPDATE territories
-				        SET TerritoryID = ?
-				            , TerritoryDescription = ?
-				        WHERE TerritoryID = ?
-		""";
+		        UPDATE territories
+		        SET TerritoryDescription= ?
+		            , RegionID= ? 
+		        WHERE TerritoryID = ?
+				""";
 
 		jdbcTemplate.update(sql
-				, territory.getTerritoryId()
 				, territory.getTerritoryDescription()
-				, territory.getRegionId());
+				, territory.getRegionId()
+				, territory.getTerritoryId());
 	}
 
 	public void deleteTerritory(int territoryId) {

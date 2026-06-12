@@ -68,7 +68,6 @@ public class MySqlProductDao implements ProductDao {
 			Product product = mapRowToProduct(row);
 			return product;
 		}
-
 		return null;
 	}
 

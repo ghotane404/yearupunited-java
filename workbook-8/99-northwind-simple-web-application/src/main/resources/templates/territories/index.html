@@ -13,14 +13,16 @@
 <body>
 <div th:replace="fragments/header.html :: nav"></div>
 <main class="container mt-4">
-    <h4>Territories</h4>
+    <h4>Territories in <span th:text="${regions.regionDescription}"></span></h4>
 
-    <a th:href="@{/territories/new}">New</a>
+    <a th:href="@{|/territories/new?tid=${regions.regionId}|}">New</a>
+
+<!--    <a th:href="@{/territories/new}">New</a>-->
     <table class="table table-striped">
         <thead>
         <tr>
             <th>Territory Id</th>
-            <th>Territory Name</th>
+            <th>Territory Location</th>
             <th></th>
         </tr>
         </thead>

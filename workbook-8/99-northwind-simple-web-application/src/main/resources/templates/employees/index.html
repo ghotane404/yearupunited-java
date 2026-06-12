@@ -32,7 +32,6 @@
             <td>
                 <a  th:href="@{|/employees/${employee.employeeId}|}" th:text="${employee.firstName}"></a>
             </td>
-<!--            <td th:text="${employee.territoryId}"></td>-->
             <td th:text="${employee.lastName}"></td>
             <!--        <td>$ <span th:text="${employee.unitPrice}"></span></td>-->
             <td th:text="${#numbers.formatCurrency(employee.salary)}"></td>

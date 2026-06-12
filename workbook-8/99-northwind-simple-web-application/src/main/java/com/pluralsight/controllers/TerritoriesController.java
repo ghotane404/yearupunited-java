@@ -1,41 +1,45 @@
 package com.pluralsight.controllers;
 
-import com.pluralsight.models.Category;
 import com.pluralsight.models.Territory;
+import com.pluralsight.services.RegionDao;
 import com.pluralsight.services.TerritoryDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class TerritoriesController {
+	private RegionDao regionDao;
 	private TerritoryDao territoryDao;
 
 	@Autowired
-	public TerritoriesController(TerritoryDao territoryDao) {
+	public TerritoriesController(RegionDao regionDao, TerritoryDao territoryDao) {
+		this.regionDao = regionDao;
 		this.territoryDao = territoryDao;
 	}
 
 	// list all territories
 	@GetMapping("/territories")
-	public String territories(Model model) {
-		model.addAttribute("territories", territoryDao.getTerritories());
+	public String territories(Model model, @RequestParam(name = "tid", defaultValue = "1") int regionId) {
+		model.addAttribute("territories", territoryDao.getTerritoriesByRegion(regionId));
+		model.addAttribute("regions", regionDao.getRegion(regionId));
 		return "territories/index";
 	}
 
 	// details page
 	@GetMapping("/territories/{id}")
 	public String getTerritory(Model model, @PathVariable int id) {
-		var territories = territoryDao.getTerritory(id);
+		var territory = territoryDao.getTerritory(id);
 
-		if (territories == null) {
+		if (territory == null) {
 			return "404";
 		}
-		model.addAttribute("territories", territories);
+
+		var region = regionDao.getRegion(territory.getRegionId());
+
+		model.addAttribute("region", region);
+		model.addAttribute("territory", territory);
 		return "territories/details";
 	}
 

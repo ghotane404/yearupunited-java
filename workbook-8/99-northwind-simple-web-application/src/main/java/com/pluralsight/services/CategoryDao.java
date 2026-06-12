@@ -1,7 +1,6 @@
 package com.pluralsight.services;
 
 import com.pluralsight.models.Category;
-import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 import java.util.ArrayList;
 

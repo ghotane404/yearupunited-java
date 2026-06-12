@@ -2,7 +2,6 @@ package com.pluralsight.controllers;
 
 import com.pluralsight.models.Product;
 import com.pluralsight.services.CategoryDao;
-import com.pluralsight.services.mysql.MySqlCategoryDao;
 import com.pluralsight.services.ProductDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

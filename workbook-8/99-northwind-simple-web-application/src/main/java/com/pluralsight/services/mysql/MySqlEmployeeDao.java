@@ -6,13 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.sql.DataSource;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-@Service
 public class MySqlEmployeeDao implements EmployeeDao {
 	private final JdbcTemplate jdbcTemplate;
 
@@ -21,7 +19,6 @@ public class MySqlEmployeeDao implements EmployeeDao {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
-	@GetMapping("/employees")
 	public ArrayList<Employee> getEmployeesByTerritory(int searchTerritoryId) {
 		ArrayList<Employee> employees = new ArrayList<>();
 
@@ -32,7 +29,7 @@ public class MySqlEmployeeDao implements EmployeeDao {
 				         , e.LastName
 				         , e.Title
 				         , e.HireDate
-				         , e.ReportsTo
+				         , e.Notes
 				         , e.Salary
 				          FROM Employees e
 				          JOIN EmployeeTerritories et
@@ -60,13 +57,12 @@ public class MySqlEmployeeDao implements EmployeeDao {
 				         , e.LastName
 				         , e.Title
 				         , e.HireDate
-				         , e.ReportsTo
+				         , e.Notes
 				         , e.Salary
-				          FROM Employees e
-				          JOIN EmployeeTerritories et
-				              ON e.EmployeeID = et.EmployeeID
-				          WHERE et.TerritoryID = ?
-				          ORDER BY e.LastName, e.FirstName
+					FROM Employees e
+					JOIN EmployeeTerritories et
+						ON e.EmployeeID = et.EmployeeID
+					WHERE e.EmployeeID = ?
 				""";
 
 		SqlRowSet row = jdbcTemplate.queryForRowSet(sql, employeeId);
@@ -75,61 +71,34 @@ public class MySqlEmployeeDao implements EmployeeDao {
 			Employee employee = mapRowToEmployee(row);
 			return employee;
 		}
-		return null;}
-
-	public ArrayList<Employee> getEmployeesByTerritory(String searchTerritoryId) {
-		ArrayList<Employee> employees = new ArrayList<>();
-
-		String sql = """
-				SELECT e.EmployeeID
-				     , et.TerritoryID
-				     , e.FirstName
-				     , e.LastName
-				     , e.Title
-				     , e.HireDate
-				     , e.ReportsTo
-				     , e.Salary
-				FROM Employees e
-					JOIN EmployeeTerritories et
-					ON e.EmployeeID = et.EmployeeID				
-				WHERE et.TerritoryID = ?	
-				ORDER BY e.LastName, e.FirstName
-				""";
-		SqlRowSet row = jdbcTemplate.queryForRowSet(sql, searchTerritoryId);
-		while (row.next()) {
-			Employee employee = mapRowToEmployee(row);
-			employees.add(employee);
-		}
-
-		return employees;
-
+		return null;
 	}
 
 	public void addEmployee(Employee employee) {
 		String sql = """
-				INSERT INTO employees (EmployeeID, TerritoryID, FirstName, LastName, Title, HireDate, ReportsTo, Salary)
+				INSERT INTO employees (EmployeeID, TerritoryID, FirstName, LastName, Title, HireDate, Notes, Salary)
 				VALUES (?, ?, ?, ?, ?, ?, ?);
 				""";
 
 		jdbcTemplate.update(sql
+				, employee.getEmployeeId()
+				, employee.getTerritoryId()
 				, employee.getFirstName()
 				, employee.getLastName()
-				, employee.getTerritoryId()
 				, employee.getTitle()
 				, employee.getHireDate()
-				, employee.getReportsTo()
-				, employee.getSalary()
-				, employee.getEmployeeId());
+				, employee.getNotes()
+				, employee.getSalary());
 	}
 
 	public void updateEmployee(Employee employee) {
 		String sql = """
-				UPDATE Employees
+				UPDATE employees
 				SET FirstName = ?
 				  , LastName = ?
 				  , Title = ?
 				  , HireDate = ?
-				  , ReportsTo = ?
+				  , Notes = ?
 				  , Salary = ?
 				WHERE EmployeeID = ?
 				""";
@@ -139,9 +108,8 @@ public class MySqlEmployeeDao implements EmployeeDao {
 				, employee.getLastName()
 				, employee.getTitle()
 				, employee.getHireDate()
-				, employee.getReportsTo()
-				, employee.getSalary()
-				, employee.getEmployeeId());
+				, employee.getNotes()
+				, employee.getSalary());
 	}
 
 	public void deleteEmployee(int id) {
@@ -159,12 +127,10 @@ public class MySqlEmployeeDao implements EmployeeDao {
 		String firstName = row.getString("FirstName");
 		String lastName = row.getString("LastName");
 		String title = row.getString("Title");
-//		LocalDateTime hireDate = row.getTimestamp("HireDate").toLocalDateTime();
 		LocalDateTime hireDate = (LocalDateTime) row.getObject("HireDate");
-		int reportsTo = row.getInt("ReportsTo");
+		String notes = row.getString("Notes");
 		double salary = row.getDouble("Salary");
 
-		return new Employee(employeeId, territoryId, firstName, lastName, title, hireDate, reportsTo, salary);
+		return new Employee(employeeId, territoryId, firstName, lastName, title, hireDate, notes, salary);
 	}
-
 }

@@ -41,11 +41,11 @@ public class MySqlCategoryDao implements CategoryDao {
 
 	public Category getCategory(int categoryId) {
 		String sql = """
-						    SELECT CategoryID
-						        , CategoryName
-						        , Description
-						    FROM categories
-						    WHERE CategoryID = ?
+				    SELECT CategoryID
+				        , CategoryName
+				        , Description
+				    FROM categories
+				    WHERE CategoryID = ?
 						""";
 
 		SqlRowSet row = jdbcTemplate.queryForRowSet(sql, categoryId);
